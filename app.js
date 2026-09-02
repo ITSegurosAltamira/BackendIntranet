@@ -23,22 +23,20 @@ app.use(cors({
     origin: '*', // Permitir cualquier origen
     credentials: true
 }));
-const apiRouter = express.Router();
-apiRouter.use('/google-drive', googleDriveRoutes);
-apiRouter.use('/notificaciones', notificacionRouter);
-apiRouter.use(changepassword);
-apiRouter.use('/expediente', expedienteRouter);
-apiRouter.use(empleadosRouter);
-apiRouter.use(signupRouter);
-apiRouter.use(login);
-apiRouter.use(reciboDePagoRoutes);
-apiRouter.use(prestacionesRouter);
-apiRouter.use(constancideTrabajoRouter);
-apiRouter.use(arc);
-apiRouter.use(vacacionesRouter);
-apiRouter.use(permisosRouter);
-apiRouter.use('/admin', adminRouter); // Rutas de administración
-apiRouter.use('/estadisticas', estadisticasRouter);
-apiRouter.use('/galeria', galeriaRouter);
-app.use('/api', apiRouter);
+app.use('/google-drive', googleDriveRoutes);
+app.use('/notificaciones', notificacionRouter);
+app.use(changepassword);
+app.use('/expediente', expedienteRouter);
+app.use(empleadosRouter);
+app.use(signupRouter);
+app.use(login);
+app.use(reciboDePagoRoutes);
+app.use(prestacionesRouter);
+app.use(constancideTrabajoRouter);
+app.use(arc);
+app.use(vacacionesRouter);
+app.use(permisosRouter);
+app.use('/admin', adminRouter); // Rutas de administración
+app.use('/estadisticas', estadisticasRouter);
+app.use('/galeria', galeriaRouter);
 export default app;
