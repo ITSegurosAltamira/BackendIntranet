@@ -17,8 +17,8 @@ app.listen(3001, () => {
   console.log('Server is running ');
 });
 // Inicia la importación automática diaria
-sincronizarDocumentosBD();
-notificarDocumentosVencidos();
+/* sincronizarDocumentosBD();
+notificarDocumentosVencidos(); */
 enviarCumpleanos();
 
 app.get("/", (req, res) => {
